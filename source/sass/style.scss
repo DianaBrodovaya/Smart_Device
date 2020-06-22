@@ -1,0 +1,109 @@
+@import 'normalize';
+@import 'fonts';
+
+* {
+  box-sizing: border-box
+}
+
+body {
+  font: 16px/1.375 "PT Mono", sans-serif;
+}
+
+li {
+  list-style: none
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  cursor: pointer
+}
+
+.wrapper {
+  max-width: 1470px;
+  padding: 0 30px;
+  margin: 0 auto
+}
+
+.main-header {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  padding: 20px 0;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.top-menu {
+  display: flex;
+  align-items: center;
+
+  li {
+    margin-left: 88px;
+
+    a {
+      display: flex;
+      align-items: center;
+
+      > svg {
+        margin-right: 15px
+      }
+    }
+  }
+
+  li:last-of-type {
+    margin-left: 38px;
+  }
+
+  button {
+    background: none;
+    font: 14px/1 "Roboto Condensed", sans-serif;
+    text-transform: uppercase;
+    padding: 14px 33px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color: #fff
+  }
+}
+
+.top-block {
+  height: 100vh;
+  background: #1B2D37 url("../img/top-block-background.png") no-repeat 100% 100%;
+  position: relative
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
