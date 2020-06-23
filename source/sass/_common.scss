@@ -1,13 +1,20 @@
+$main-text-color: #666666;
+$light-text-color: #C2C6C9;
+$light-background: #FAFAFA;
+$blue-background: #00B2FF;
+
 * {
   box-sizing: border-box
 }
 
 body {
   font: 16px/1.375 "PT Mono", sans-serif;
+  color: $main-text-color;
 }
 
 .wrapper {
-  max-width: 1470px;
+  max-width: 1412px;
+  box-sizing: content-box;
   padding: 0 30px;
   margin: 0 auto
 }
@@ -21,6 +28,10 @@ a {
   text-decoration: none;
 }
 
-button {
-  cursor: pointer
+.button {
+  cursor: pointer;
+  background: none;
+  font: 14px/1 "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  border-radius: 5px;
 }
