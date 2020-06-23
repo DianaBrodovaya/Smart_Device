@@ -10,13 +10,15 @@ $blue-background: #00B2FF;
 body {
   font: 16px/1.375 "PT Mono", sans-serif;
   color: $main-text-color;
+  overflow-x: hidden;
 }
 
 .wrapper {
   max-width: 1412px;
   box-sizing: content-box;
   padding: 0 30px;
-  margin: 0 auto
+  margin: 0 auto;
+  position: relative;
 }
 
 li {
@@ -28,10 +30,18 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin-top: 0
+}
+
 .button {
   cursor: pointer;
   background: none;
-  font: 14px/1 "Roboto Condensed", sans-serif;
+  font: bold 14px/1 "Roboto Condensed", sans-serif;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   border-radius: 5px;
+  padding: 14px 33px;
+  color: inherit;
+  transition: all 0.3s;
 }

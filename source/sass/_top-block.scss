@@ -1,5 +1,73 @@
+$subtitle-padding: 95px;
+
 .top-block {
   height: 100vh;
   background: #1B2D37 url("../img/top-block-background.png") no-repeat 100% 100%;
-  position: relative
+  color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-x: hidden;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100%
+  }
+
+  &__title {
+    font: bold 80px/1 "Roboto Condensed", sans-serif;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+  }
+
+  &__subtitle {
+    font-size: 22px;
+    line-height: 1.5;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+  }
+
+  &__subtitle-icon {
+    width: $subtitle-padding;
+    padding-right: 28px;
+    margin-top: 15px;
+  }
+
+  &__subtitle-text {
+    width: calc(100% - #{$subtitle-padding})
+  }
+
+  &__button {
+    font-size: 16px;
+    background: $blue-background;
+    border: none;
+    margin-left: $subtitle-padding;
+    padding: 20px 45px
+  }
+
+  &__button:hover {
+    background: #008bc7;
+  }
+
+  &__img {
+    position: relative;
+    right: -80px;
+  }
+
+  &__scroll-down {
+    display: inline-block;
+    color: #37434a;
+    font-size: 14px;
+    transform: rotate(-90deg);
+    position: absolute;
+    left: 0;
+    bottom: 14%;
+    cursor: pointer;
+  }
+
 }
+
