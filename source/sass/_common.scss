@@ -21,6 +21,10 @@ body {
   position: relative;
 }
 
+.wrapper-min {
+  max-width: 1170px
+}
+
 li {
   list-style: none
 }
@@ -44,4 +48,8 @@ p {
   padding: 14px 33px;
   color: inherit;
   transition: all 0.3s;
+}
+
+.hidden {
+  visibility: hidden;
 }
