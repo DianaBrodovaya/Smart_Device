@@ -2,7 +2,7 @@
 
   &__wrapper {
     padding-top: 113px;
-    padding-bottom: 113px;
+    padding-bottom: 87px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -13,23 +13,20 @@
   flex-basis: 48.7%;
   border: 1px solid #ebebeb;
   border-left: 3px solid $blue-background;
-  padding: 40px 40px 65px 40px;
+  padding: 40px 40px 66px 40px;
   margin-bottom: 30px;
   cursor: pointer;
   transition: all 0.3s;
 
   &__icon {
     display: inline-block;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     fill: $blue-background;
   }
 
-  &__header {
+  h3 {
     color: $blue-background;
-    font: 24px/1 "Roboto Condensed", sans-serif;
-    margin-bottom: 25px
   }
-
 }
 
 .advantages-item:hover {
@@ -37,7 +34,7 @@
   color: #fff;
 }
 
-.advantages-item:hover .advantages-item__header {
+.advantages-item:hover h3 {
   color: #fff
 }
 

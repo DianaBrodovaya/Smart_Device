@@ -1,0 +1,53 @@
+.goods-services {
+  background: $dark-background;
+  color: #fff;
+
+   &__wrapper {
+     padding-top: 90px;
+     padding-bottom: 80px
+   }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 58px;
+  }
+
+  &__item {
+    flex-basis: 370px;
+    height: 620px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 46px;
+  }
+
+  h4 {
+    margin-top: 53px;
+    margin-left: 44px;
+    max-width: 45%;
+  }
+
+  &__item:first-child {
+    background-image: url("../img/service_1.png");
+  }
+
+  &__item:nth-child(2) {
+    background-image: url("../img/service_2.png");
+  }
+
+  &__item:nth-child(3) {
+    background-image: url("../img/service_3.png");
+  }
+}
+
+.next-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 63px;
+  height: 63px;
+  background: $blue-background url("../img/icon-next.svg") no-repeat center;
+}
+

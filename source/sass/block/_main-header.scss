@@ -20,17 +20,10 @@
     align-items: center;
   }
 
-  &__menu-item {
-    margin-left: 88px;
-  }
-
-  &__menu-item:last-of-type {
-    margin-left: 38px;
-  }
-
   &__menu-link {
     display: flex;
     align-items: center;
+    margin-left: 85px;
   }
 
   &__menu-icon {
@@ -39,7 +32,8 @@
 
   &__button {
     border: 1px solid #fff;
-    color: #fff
+    color: #fff;
+    margin-left: 50px;
   }
 }
 

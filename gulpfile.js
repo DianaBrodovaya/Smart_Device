@@ -42,6 +42,7 @@ gulp.task("server", function () {
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/img/*.jpg", gulp.series("copy"));
   gulp.watch("source/img/*.png", gulp.series("copy"));
+  gulp.watch("source/js/*.js", gulp.series("copy"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
 

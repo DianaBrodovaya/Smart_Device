@@ -1,0 +1,24 @@
+.about-company {
+
+  &__wrapper {
+    display: flex;
+    padding-bottom: 110px;
+  }
+
+  &__wrapper--left {
+    margin-right: 63px
+  }
+
+  &__button-details {
+    display: inline-block;
+    border: 1px solid $blue-background;
+    color: $blue-background;
+    padding: 15px 50px;
+    margin-top: 20px;
+  }
+
+  &__button-details:hover {
+    background: $blue-background;
+    color: #fff
+  }
+}

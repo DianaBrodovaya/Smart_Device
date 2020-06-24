@@ -1,8 +1,5 @@
-$subtitle-padding: 95px;
-
-.top-block {
+.promo {
   height: 100vh;
-  background: #1B2D37 url("../img/top-block-background.png") no-repeat 100% 100%;
   color: #fff;
   position: relative;
   display: flex;
@@ -15,12 +12,6 @@ $subtitle-padding: 95px;
     align-items: center;
     position: relative;
     height: 100%
-  }
-
-  &__title {
-    font: bold 80px/1 "Roboto Condensed", sans-serif;
-    text-transform: uppercase;
-    margin: 0 0 20px 0;
   }
 
   &__subtitle {
@@ -42,6 +33,7 @@ $subtitle-padding: 95px;
   }
 
   &__button {
+    display: inline-block;
     font-size: 16px;
     background: $blue-background;
     border: none;
@@ -50,10 +42,10 @@ $subtitle-padding: 95px;
   }
 
   &__button:hover {
-    background: #008bc7;
+    background: $blue-background-hover;
   }
 
-  &__img {
+  &__wrapper--right img {
     position: relative;
     right: -80px;
   }
