@@ -1,0 +1,27 @@
+.feedback-block {
+  background: $blue-background url("../img/form-triangles.png") no-repeat 100% center;
+  color: #fff;
+
+  &__wrapper {
+    display: flex;
+    padding-top: 92px;
+    padding-bottom: 92px;
+  }
+
+  &__picture {
+    width: calc(665px - #{$feedback-block-translation});
+    margin-right: 114px;
+
+    img {
+      position: relative;
+      left: -$feedback-block-translation;
+    }
+  }
+
+  .feedback-form {
+    margin-top: 50px
+  }
+
+}
+
+

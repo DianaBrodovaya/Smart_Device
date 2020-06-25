@@ -15,28 +15,43 @@
 
   &__column {
     flex-basis: 350px;
+    color: $light-text-color
+  }
+
+  &__column:nth-child(2) {
+    flex-basis: 616px;
   }
 
   .site-logo {
     display: inline-block;
-    margin-bottom: 55px
+    margin-bottom: 40px
   }
 
   &__column-header {
     font: 15px/1 "Roboto Condensed", sans-serif;
+    color: #1B2D37;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: 25px
   }
 
-  &__column-wrapper{
+  &__column-links{
     display: flex;
-    flex-direction: column;
-    color: $light-text-color
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   &__column-link{
+    width: 50%;
+  }
 
+  &__column-link:nth-child(2n+1){
+    padding-right: 65px;
+  }
+
+  &__column-wrapper {
+    display: flex;
+    flex-direction: column;
   }
 
   &__block--bottom {

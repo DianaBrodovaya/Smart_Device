@@ -1,4 +1,4 @@
-.promo {
+.promo-block {
   height: 100vh;
   color: #fff;
   position: relative;
@@ -45,7 +45,7 @@
     background: $blue-background-hover;
   }
 
-  &__wrapper--right img {
+  &__img {
     position: relative;
     right: -80px;
   }
