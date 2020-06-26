@@ -47,8 +47,10 @@
         <a href="#feedback-block" class="promo-block__button button">Получить бесплатную консультацию</a>
       </div>
       <picture class="promo-block__img">
-        <source srcset="img/promo-img.png">
-        <img src="img/promo-img.png" alt="Печатные платы" width="705px" height="515px">
+        <source srcset="img/promo-img.png" media="(min-width: 1025px)">
+        <source srcset="img/promo-img_tablet.png" media="(min-width: 768px)">
+        <source srcset="img/promo-img_mobile.png" media="(min-width: 320px)">
+        <img src="img/promo-img.png" alt="Печатные платы">
       </picture>
       <a href="#advantages" class="promo-block__scroll-down">Скролл вниз</a>
     </div>
@@ -150,11 +152,11 @@
     </div>
   </section>
 
-  <section id="#feedback-block" class="feedback-block">
+  <section id="feedback-block" class="feedback-block">
     <div class="feedback-block__wrapper wrapper wrapper-min">
       <picture class="feedback-block__picture">
         <source srcset="img/paper-airplane.png">
-        <img src="img/paper-airplane.png" alt="Бумажный самолетик" width="665px" height="487px">
+        <img src="img/paper-airplane.png" alt="Бумажный самолетик">
       </picture>
       <div class="feedback-block__form-wrapper">
         <h2>Остались вопросы? Задайте их нам!</h2>

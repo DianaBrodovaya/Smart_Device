@@ -9,19 +9,33 @@
   }
 
   &__picture {
-    width: calc(665px - #{$feedback-block-translation});
+    width: calc(100% - 570px - 114px);
     margin-right: 114px;
 
     img {
       position: relative;
       left: -$feedback-block-translation;
+      max-width: calc(100% + #{$feedback-block-translation});
     }
   }
 
-  .feedback-form {
-    margin-top: 50px
+  &__form {
+    margin-top: 50px;
+    max-width: 590px;
   }
+}
 
+@media screen and (max-width: 1024px) {
+  .feedback-block {
+
+    &__picture {
+      display: none
+    }
+
+    &__form-wrapper {
+      margin: 0 auto
+    }
+  }
 }
 
 

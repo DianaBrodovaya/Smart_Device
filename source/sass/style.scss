@@ -43,9 +43,16 @@ body {
 .wrapper {
   max-width: 1412px;
   box-sizing: content-box;
-  padding: 0 30px;
+  padding: 0 25px;
   margin: 0 auto;
   position: relative;
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .wrapper-min {
@@ -200,6 +207,7 @@ textarea {
 @import "block/feedback-block";
 @import "source/sass/block/popup";
 @import "block/main-footer";
+
 
 
 
