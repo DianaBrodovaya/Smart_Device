@@ -1,3 +1,5 @@
+'use strict';
+
 /*Плавная прокрутка до якоря*/
 const anchors = document.querySelectorAll('a[href*="#"]');
 
@@ -50,10 +52,25 @@ document.body.addEventListener('keyup', function(e) {
   }
 });
 
-
 popupOverlay.addEventListener('click', function() {
   document.querySelector('.popup.active').classList.remove('active');
   this.classList.remove('active');
 });
 
+/*Аккордеон*/
+let toggleButton = document.querySelectorAll(".toggle-button");
+
+for (let i = 0; i < toggleButton.length; i++) {
+  toggleButton[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    let toggleBlock = this.nextElementSibling;
+    if (toggleBlock.style.maxHeight){
+      toggleBlock.style.maxHeight = null;
+      toggleBlock.classList.remove("active");
+    } else {
+      toggleBlock.style.maxHeight = toggleBlock.scrollHeight + "px";
+      toggleBlock.classList.add("active");
+    }
+  });
+}
 

@@ -28,6 +28,11 @@
     width: 100%;
     margin-bottom: 30px;
   }
+
+  .button:hover {
+    background: #fff;
+    color: $blue-background
+  }
 }
 
 .popup-overlay {
@@ -47,4 +52,10 @@
 .popup-overlay.active {
   opacity: 1;
   visibility: visible;
+}
+
+@media screen and(max-width: $tablet-width) {
+  .popup {
+    display: none
+  }
 }

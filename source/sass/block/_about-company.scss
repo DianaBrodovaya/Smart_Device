@@ -1,11 +1,9 @@
 .about-company {
-
-  &__wrapper {
     display: flex;
+    padding-top: 86px;
     padding-bottom: 110px;
-  }
 
-  &__wrapper--left {
+  img {
     margin-right: 63px
   }
 
@@ -20,5 +18,21 @@
   &__button-details:hover {
     background: $blue-background;
     color: #fff
+  }
+}
+
+@media screen and(max-width: $tablet-width){
+  .about-company {
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+}
+
+@media screen and(max-width: $mobile-width){
+  .about-company {
+
+    img {
+      display: none
+    }
   }
 }

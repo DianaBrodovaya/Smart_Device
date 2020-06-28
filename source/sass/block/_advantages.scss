@@ -1,52 +1,68 @@
 .advantages {
+  padding-top: 113px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-  &__wrapper {
-    padding-top: 113px;
-    padding-bottom: 87px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  .advantages-item {
+    width: calc((100% - 30px) / 2);
+    border: 1px solid #ebebeb;
+    border-left: 3px solid $blue-background;
+    padding: 40px 40px 66px 40px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+    background: #fff;
+
+    &__icon {
+      display: inline-block;
+      margin-bottom: 15px;
+      fill: $blue-background;
+    }
+
+    h3 {
+      color: $blue-background;
+    }
+  }
+
+  .advantages-item:hover {
+    background: $blue-background;
+    color: #fff;
+  }
+
+  .advantages-item:hover h3 {
+    color: #fff
+  }
+
+  .advantages-item:hover .advantages-item__icon {
+    fill: #fff;
+  }
+
+  .background-wrapper {
+    &--triangles {
+      background: url("../img/background-triangles.png") no-repeat;
+      background-size: cover;
+    }
   }
 }
 
-.advantages-item {
-  flex-basis: 48.7%;
-  border: 1px solid #ebebeb;
-  border-left: 3px solid $blue-background;
-  padding: 40px 40px 66px 40px;
-  margin-bottom: 30px;
-  cursor: pointer;
-  transition: all 0.3s;
-  background: #fff;
+@media screen and(max-width: $tablet-width) {
+  .advantages {
+    padding-top: 54px;
 
-  &__icon {
-    display: inline-block;
-    margin-bottom: 15px;
-    fill: $blue-background;
+    .advantages-item {
+      padding: 24px 24px 5px 24px;
+      margin-bottom: 20px;
+    }
   }
+}
+@media screen and(max-width: $mobile-width) {
+  .advantages {
 
-  h3 {
-    color: $blue-background;
+    .advantages-item {
+      width: 100%
+    }
   }
 }
 
-.advantages-item:hover {
-  background: $blue-background;
-  color: #fff;
-}
-
-.advantages-item:hover h3 {
-  color: #fff
-}
-
-.advantages-item:hover .advantages-item__icon{
-  fill: #fff;
-}
-
-.background-wrapper {
-  &--triangles {
-    background: url("../img/background-triangles.png") no-repeat;
-    background-size: cover;
-  }
-}
 
