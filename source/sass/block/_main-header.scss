@@ -1,13 +1,15 @@
 .main-header {
   color: #fff;
-  padding: 33px 0;
-  height: $header-height;
+  padding-top: 30px;
 
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+  }
+  .site-logo {
+    padding-left: 6px;
   }
 
   .site-logo--mobile {
@@ -23,7 +25,7 @@
   &__menu-link {
     display: flex;
     align-items: center;
-    margin-left: 85px;
+    margin-left: 90px;
   }
 
   &__menu-link:hover {
@@ -48,7 +50,11 @@
 
 @media screen and (max-width: $tablet-width) {
   .main-header {
-    padding: 20px 0;
+    padding: 15px 0;
+
+    .site-logo {
+      padding: 5px 0 0 0
+    }
 
     &__menu-link {
       font-size: 0;

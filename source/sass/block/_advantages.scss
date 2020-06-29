@@ -1,5 +1,5 @@
 .advantages {
-  padding-top: 113px;
+  padding-top: 112px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -8,11 +8,12 @@
     width: calc((100% - 30px) / 2);
     border: 1px solid #ebebeb;
     border-left: 3px solid $blue-background;
-    padding: 40px 40px 66px 40px;
+    padding: 40px 30px 48px 50px;
     margin-bottom: 30px;
     cursor: pointer;
     transition: all 0.3s;
     background: #fff;
+    min-height: 299px;
 
     &__icon {
       display: inline-block;
@@ -51,8 +52,12 @@
     padding-top: 54px;
 
     .advantages-item {
-      padding: 24px 24px 5px 24px;
-      margin-bottom: 20px;
+      padding: 24px 20px 0 24px;
+      min-height: auto;
+
+      &__icon {
+        margin-bottom: 2px
+      }
     }
   }
 }
@@ -60,8 +65,15 @@
   .advantages {
 
     .advantages-item {
-      width: 100%
+      width: 100%;
+      margin-bottom: 20px;
+
+      &__icon{
+        margin-bottom: 7px
+      }
     }
+
+
   }
 }
 

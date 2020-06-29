@@ -11,8 +11,8 @@
 .promo-block {
   color: #fff;
   position: relative;
-  overflow-x: hidden;
-  height: calc(100% - #{$header-height});
+  overflow: hidden;
+  height: calc(100% - 88px);
 
   &__wrapper {
     display: flex;
@@ -22,7 +22,7 @@
   }
 
   &__text {
-    max-width: 50%;
+    max-width: 52%;
   }
 
   &__subtitle {
@@ -32,6 +32,7 @@
     align-items: flex-start;
     padding-left: 95px;
     position: relative;
+    margin-bottom: 25px;
 
     &::before {
       position: absolute;
@@ -74,8 +75,8 @@
     font-size: 14px;
     transform: rotate(-90deg);
     position: absolute;
-    left: 0;
-    bottom: 14%;
+    left: -9px;
+    bottom: 17%;
     cursor: pointer;
   }
 
@@ -88,20 +89,26 @@
 @media screen and (max-width: $tablet-width) {
   .main-screen {
     background-image: url("../img/promo-background.png"), url("../img/promo-img_tablet.png");
-    background-position: 50%, right 0 top 113px;
+    background-position: 50%, right 0 top 82px;
     background-size: cover, 314px auto;
   }
 
   .promo-block {
 
+    &__wrapper {
+      display: block
+    }
+
     &__text {
       max-width: 493px;
-      padding-left: 50px;
+      padding-left: 63px;
+      margin-top: 94px;
     }
 
     &__subtitle {
       font-size: 18px;
       padding-left: 50px;
+      margin-bottom: 37px;
 
       &::before {
         width: 32px
@@ -128,14 +135,17 @@
   }
 
   .promo-block {
+    height: calc(100% - 44px);
 
     &__text {
       padding-left: 0;
       max-width: 100%;
+      margin-top: 211px
     }
 
     &__subtitle {
-      font-size: 16px
+      font-size: 16px;
+      margin-bottom: 25px
     }
 
     &__button--mobile {

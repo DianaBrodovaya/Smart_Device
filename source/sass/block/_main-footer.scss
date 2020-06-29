@@ -1,7 +1,7 @@
 .main-footer {
 
   &__top {
-    padding: 65px 0 30px 0;
+    padding: 63px 0 30px 0;
     border-bottom: 1px solid #E5E5E5;
     font-size: 15px;
     line-height: 1.7;
@@ -14,18 +14,26 @@
   }
 
   &__column {
-    flex-basis: 350px;
     color: $light-text-color;
     padding-bottom: 30px;
   }
 
+  &__links {
+    padding-left: 6px;
+    flex-basis: 394px;
+  }
+
   &__nav {
-    flex-basis: 616px;
+    flex-basis: 615px;
+  }
+
+  &__contacts {
+    padding-left: 6px
   }
 
   .site-logo {
     display: inline-block;
-    margin-bottom: 40px
+    margin: 0 0 48px 0
   }
 
   &__column-header {
@@ -33,7 +41,7 @@
     color: #1B2D37;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    margin-bottom: 25px
+    margin: 3px 0 25px
   }
 
   &__nav-links {
@@ -56,10 +64,11 @@
   }
 
   &__bottom {
-    padding: 20px 0;
+    padding: 15px 0 18px 13px;
     color: $light-text-color;
     text-transform: uppercase;
     font-size: 13px;
+    letter-spacing: 0.04em;
   }
 
   &__bottom .main-footer__wrapper {
@@ -69,11 +78,11 @@
   }
 
   &__bottom-text {
-    flex-grow: 1;
+    flex-grow: 1.1;
   }
 
   &__bottom-copyright {
-    flex-grow: 2;
+    flex-grow: 2.1;
   }
 
   &__copyright--tablet {
@@ -93,7 +102,7 @@
 
   &__icon {
     display: inline-block;
-    margin-right: 8px
+    margin-right: 6px
   }
 }
 
@@ -128,14 +137,15 @@
       align-items: center;
       border-bottom: 1px solid #e5e5e5;
       padding-top: 20px;
-      padding-bottom: 20px;
+      padding-bottom: 15px;
       margin-bottom: 0px;
     }
 
     &__nav,
     &__contacts {
       flex-basis: 50%;
-      padding-top: 30px;
+      padding-top: 36px;
+      padding-bottom: 36px
     }
 
     &__nav-link {
@@ -144,6 +154,10 @@
 
     &__nav-link:nth-child(2n+1) {
       padding-right: 0
+    }
+
+    &__bottom {
+      padding-top: 26px
     }
 
     &__bottom-text,
@@ -171,27 +185,28 @@
     }
 
     &__links {
-      padding-top: 40px;
+      padding-top: 43px;
       padding-bottom: 50px;
       flex-direction: column;
     }
 
     .site-logo {
-      margin-bottom: 15px
+      margin-bottom: 21px
     }
 
     &__copyright--tablet {
-      margin-bottom: 25px
+      margin-bottom: 28px
     }
 
     &__nav,
     &__contacts {
       flex-basis: 100%;
+      padding-top: 26px;
+      padding-bottom: 23px
     }
 
     &__nav {
       border-bottom: 1px solid #e5e5e5;
-      padding-bottom: 23px
     }
 
     &__bottom .main-footer__wrapper {

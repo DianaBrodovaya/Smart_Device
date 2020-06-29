@@ -1,10 +1,10 @@
 .about-company {
-    display: flex;
-    padding-top: 86px;
-    padding-bottom: 110px;
+  display: flex;
+  padding-top: 75px;
+  padding-bottom: 101px;
 
   img {
-    margin-right: 63px
+    margin: 12px 63px 0 0
   }
 
   &__button-details {
@@ -21,15 +21,26 @@
   }
 }
 
-@media screen and(max-width: $tablet-width){
+@media screen and(max-width: $tablet-width) {
   .about-company {
-    padding-top: 40px;
+    padding-top: 35px;
     padding-bottom: 80px;
+
+    &__text {
+      margin-top: 7px
+    }
+
+    img {
+      margin-left: 6px;
+      width: 132px;
+      height: 349px
+    }
   }
 }
 
-@media screen and(max-width: $mobile-width){
+@media screen and(max-width: $mobile-width) {
   .about-company {
+    padding-bottom: 64px;
 
     img {
       display: none
