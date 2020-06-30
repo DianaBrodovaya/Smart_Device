@@ -19,7 +19,9 @@ for (let anchor of anchors) {
 /*Попапы*/
 const openPopupButtons = document.querySelectorAll('.popup-button'),
   popupOverlay = document.querySelector('.popup-overlay'),
-  closePopupButtons = document.querySelectorAll('.popup-close');
+  closePopupButtons = document.querySelectorAll('.popup-close'),
+  popupForm = document.querySelectorAll('.popup form');
+
 
 openPopupButtons.forEach(function(item) {
   item.addEventListener('click', function(e) {
@@ -40,7 +42,6 @@ closePopupButtons.forEach(function(item) {
     parentPopup.classList.remove('active');
     popupOverlay.classList.remove('active');
   });
-
 });
 
 document.body.addEventListener('keyup', function(e) {
@@ -57,20 +58,46 @@ popupOverlay.addEventListener('click', function() {
   this.classList.remove('active');
 });
 
-/*Аккордеон*/
-let toggleButton = document.querySelectorAll(".toggle-button");
+popupForm.forEach(function(item) {
+  item.addEventListener('submit', function() {
+    let parentPopup = this.closest('.popup');
 
-for (let i = 0; i < toggleButton.length; i++) {
-  toggleButton[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    let toggleBlock = this.nextElementSibling;
-    if (toggleBlock.style.maxHeight){
-      toggleBlock.style.maxHeight = null;
-      toggleBlock.classList.remove("active");
-    } else {
-      toggleBlock.style.maxHeight = toggleBlock.scrollHeight + "px";
-      toggleBlock.classList.add("active");
-    }
+    parentPopup.classList.remove('active');
+    popupOverlay.classList.remove('active');
+
   });
+});
+
+/*Аккордеон*/
+let accordionToggle = document.querySelectorAll('.accordion-toggle');
+
+for (let i = 0; i < accordionToggle.length; i++) {
+  accordionToggle[i].addEventListener('click', function() {
+    if (!(this.classList.contains('active'))) {
+      for (let i = 0; i < accordionToggle.length; i++) {
+        accordionToggle[i].classList.remove('active');
+      }
+      this.classList.add('active');
+    } else {
+      this.classList.remove('active');
+    }
+  })
 }
+
+/*Перенос элемента при уменьшении экрана*/
+let copyright = document.querySelector('.main-footer__bottom-copyright'),
+  newLocation = document.querySelector('.main-footer__links'),
+  oldLocation = document.querySelector('.main-footer__bottom .wrapper'),
+  socialLinks = document.querySelector('.main-footer__top .social-links'),
+  policy = document.querySelector('.main-footer__bottom-policy');
+
+window.addEventListener('resize', () => {
+  if (document.body.clientWidth <= 1024) {
+      newLocation.insertBefore(copyright, socialLinks)
+  } else if (document.body.clientWidth >= 1024) {
+      oldLocation.insertBefore(copyright, policy)
+    }
+});
+
+
 

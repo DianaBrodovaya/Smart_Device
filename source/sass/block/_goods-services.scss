@@ -26,6 +26,11 @@
     position: relative;
     margin-bottom: 46px;
     padding: 49px 44px;
+    transition: all 0.3s;
+
+    &:hover {
+     opacity: 0.7
+    }
   }
 
   h4 {

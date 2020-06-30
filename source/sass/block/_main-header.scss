@@ -78,15 +78,4 @@
   }
 }
 
-@media screen and (max-width: $mobile-width) {
-  .main-header {
-    .site-logo {
-      display: none
-    }
-
-    .site-logo--mobile {
-      display: inline-block;
-    }
-  }
-}
 

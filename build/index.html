@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Печатные платы - производство и монтаж, поставка комплектующих, блоков и модулей">
+  <meta name="description" content="Печатные платы, производство печатных плат, монтаж печатных плат, поставка комплектующих, поставка блоков, поставка модулей">
   <title>Smart Device</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -12,14 +14,11 @@
   <header class="main-header">
     <div class="main-header__wrapper wrapper">
       <a class="site-logo">
-        <svg width="202" height="52">
-          <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
-        </svg>
-      </a>
-      <a class="site-logo--mobile">
-        <svg width="38" height="38">
-          <use xlink:href="img/sprite_auto.svg#icon-logo--mobile"></use>
-        </svg>
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/icon-logo.svg">
+          <source srcset="img/icon-logo--mobile.svg">
+          <img srcset="img/icon-logo.svg" alt="Логотип Smart Device">
+        </picture>
       </a>
       <div class="main-header__menu">
         <a href="mailto:info@sd.ru" class="main-header__menu-link" target="_blank">
@@ -46,8 +45,10 @@
         <div class="promo-block__subtitle">
           <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
         </div>
-        <a href="#feedback-block" class="promo-block__button promo-block__button--desktop button">Получить бесплатную консультацию</a>
-        <a href="#feedback-block" class="promo-block__button promo-block__button--mobile button">Бесплатная консультация</a>
+        <a href="#feedback-block" class="promo-block__button promo-block__button--desktop button">Получить бесплатную
+          консультацию</a>
+        <a href="#feedback-block" class="promo-block__button promo-block__button--mobile button">Бесплатная
+          консультация</a>
       </div>
       <a href="#advantages" class="promo-block__scroll-down">Скролл вниз</a>
     </div>
@@ -96,7 +97,10 @@
     </section>
 
     <section class="about-company wrapper-min wrapper">
-      <img src="img/year_2005.png" alt="Год" width="115" height="305">
+      <picture>
+        <source srcset="img/year_2005.webp" type="image/webp">
+        <img src="img/year_2005.png" alt="Год" width="115" height="305">
+      </picture>
       <div class="about-company__text">
         <h2>О компании</h2>
         <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с
@@ -148,20 +152,21 @@
   <section id="feedback-block" class="feedback-block">
     <div class="feedback-block__wrapper wrapper wrapper-min">
       <picture class="feedback-block__picture">
-        <source srcset="img/paper-airplane.png">
+        <source srcset="img/paper-airplane.webp" type="image/webp">
         <img src="img/paper-airplane.png" alt="Бумажный самолетик">
       </picture>
       <div class="feedback-block__form-wrapper">
         <h2>Остались вопросы? Задайте их нам!</h2>
         <p>Мы проконсультируем Вас бесплатно</p>
         <form action="#" class="feedback-block__form feedback-form">
-          <label><input type="text" placeholder="Имя"></label>
-          <label><input type="text" placeholder="Телефон"></label>
-          <textarea placeholder="Ваш вопрос"></textarea>
+          <label><input type="text" placeholder="Имя" required=""></label>
+          <label><input type="tel" placeholder="Телефон" required=""></label>
+          <label for="feedback-textarea"></label>
+          <textarea placeholder="Ваш вопрос" id="feedback-textarea"></textarea>
           <button type="submit" class="button">Задать вопрос</button>
           <label class="checkbox-label">
-            <input type="checkbox">Я согласен на обработку персональных данных
-            <span class="checkbox__icon"></span>
+            <input type="checkbox" required="">Я согласен на обработку персональных данных
+            <span class="checkbox-label__icon"></span>
           </label>
         </form>
       </div>
@@ -178,19 +183,18 @@
             <use xlink:href="img/sprite_auto.svg#icon-footer-logo"></use>
           </svg>
         </a>
-        <span class="main-footer__copyright--tablet">1999-2018 SD Service Devices</span>
         <div class="social-links">
-          <a href="#" class="social-links__icon">
+          <a href="#" class="social-links__icon">Фейсбук
             <svg width="27" height="27">
               <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
             </svg>
           </a>
-          <a href="#" class="social-links__icon">
+          <a href="#" class="social-links__icon">Одноклассники
             <svg width="27" height="27">
               <use xlink:href="img/sprite_auto.svg#icon-ok"></use>
             </svg>
           </a>
-          <a href="#" class="social-links__icon">
+          <a href="#" class="social-links__icon">В контакте
             <svg width="27" height="27">
               <use xlink:href="img/sprite_auto.svg#icon-vk"></use>
             </svg>
@@ -198,11 +202,10 @@
         </div>
       </div>
       <div class="main-footer__column main-footer__nav">
-        <div class="main-footer__column-header">
+        <div class="main-footer__column-header accordion-toggle">
           Разделы сайта
         </div>
-        <button type="button" class="toggle-button toggle-button__nav toggle-button--closed"></button>
-        <ul class="main-footer__nav-links toggle-block">
+        <ul class="main-footer__nav-links accordion-block">
           <li class="main-footer__nav-link"><a href="#">О компании</a></li>
           <li class="main-footer__nav-link"><a href="#">Комплектующие</a></li>
           <li class="main-footer__nav-link"><a href="#">Продукты</a></li>
@@ -213,11 +216,10 @@
         </ul>
       </div>
       <div class="main-footer__column main-footer__contacts">
-        <div class="main-footer__column-header">
+        <div class="main-footer__column-header accordion-toggle">
           Наш офис
         </div>
-        <button type="button" class="toggle-button toggle-button__contacts toggle-button--closed"></button>
-        <div class="main-footer__column-wrapper toggle-block">
+        <div class="main-footer__column-wrapper accordion-block">
           <span>г. Мытищи, Олимпийский проспект, д.10</span>
           <a href="tel:+74955894050">+7 (495) 589-40-50</a>
           <a href="tel:+79250038767">+7 (925) 003-87-67</a>
@@ -228,10 +230,10 @@
   </div>
   <div class="main-footer__bottom">
     <div class="main-footer__wrapper wrapper">
-        <span class="main-footer__bottom-text">Все права защищены</span>
-        <span class="main-footer__bottom-copyright">1999-2018 SD Service Devices</span>
-        <a href="#" class="main-footer__bottom-policy">Условия конфиденциальности</a>
-        <a href="#" class="main-footer__bottom-developer">Developed by wow studio </a>
+      <span class="main-footer__bottom-text">Все права защищены</span>
+      <span class="main-footer__bottom-copyright">1999-2018 SD Service Devices</span>
+      <a href="#" class="main-footer__bottom-policy">Условия конфиденциальности</a>
+      <a href="#" class="main-footer__bottom-developer">Developed by wow studio </a>
     </div>
   </div>
 </footer>
@@ -245,18 +247,20 @@
   <h2>Закажите звонок</h2>
   <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
   <form action="#" class="feedback-popup__form feedback-form">
-    <label><input type="text" placeholder="Имя" autofocus=""></label>
-    <label><input type="text" placeholder="Телефон"></label>
-    <textarea placeholder="Ваш вопрос"></textarea>
+    <label><input type="text" placeholder="Имя" autofocus="" required=""></label>
+    <label><input type="tel" placeholder="Телефон" required="" class="tel"></label>
+    <label for="popup-textarea"></label>
+    <textarea placeholder="Ваш вопрос" id="popup-textarea"></textarea>
     <button type="submit" class="button">Отправить</button>
     <label class="checkbox-label">
-      <input type="checkbox">Я согласен на обработку персональных данных
-      <span class="checkbox__icon"></span>
+      <input type="checkbox" required="">Я согласен на обработку персональных данных
+      <span class="checkbox-label__icon"></span>
     </label>
   </form>
 </div>
 <div class="popup-overlay"></div>
 
+<script src="js/input-mask.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

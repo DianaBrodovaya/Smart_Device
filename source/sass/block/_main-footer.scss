@@ -85,10 +85,6 @@
     flex-grow: 2.1;
   }
 
-  &__copyright--tablet {
-    display: none;
-  }
-
   &__bottom-policy {
     flex-grow: 6
   }
@@ -99,15 +95,16 @@
 }
 
 .social-links {
+  font-size: 0;
 
   &__icon {
     display: inline-block;
-    margin-right: 6px
-  }
-}
+    margin-right: 6px;
 
-.toggle-button {
-  display: none;
+    &:hover svg {
+      transform: scale(1.2);
+    }
+  }
 }
 
 @media screen and(max-width: $tablet-width) {
@@ -138,7 +135,7 @@
       border-bottom: 1px solid #e5e5e5;
       padding-top: 20px;
       padding-bottom: 15px;
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
 
     &__nav,
@@ -160,13 +157,13 @@
       padding-top: 26px
     }
 
-    &__bottom-text,
-    &__bottom-copyright {
+    &__bottom-text {
       display: none
     }
 
-    &__copyright--tablet {
-      display: block;
+    &__bottom-copyright {
+      flex-grow: 0;
+      display: inline-block;
     }
   }
 }
@@ -174,19 +171,32 @@
 @media screen and(max-width: $mobile-width) {
   .main-footer {
 
-    &__column {
-      padding-left: 15px;
-      padding-right: 15px
+    .accordion-block {
+      display: none;
+      padding: 0 15px 25px;
     }
 
     &__column-header {
-      float: left;
-      margin-bottom: 0;
+      margin: 0;
+      padding: 26px 15px 23px;
+      width: 100%;
+      cursor: pointer;
+      background-image: url("../img/icon-plus.svg");
+      background-repeat: no-repeat;
+      background-size: 16px 16px;
+      background-position: right 15px center;
+
+      &.active {
+        background-image: url("../img/icon-minus.svg");
+
+        & + .accordion-block {
+          display: flex
+        }
+      }
     }
 
     &__links {
-      padding-top: 43px;
-      padding-bottom: 50px;
+      padding: 43px 15px 50px;
       flex-direction: column;
     }
 
@@ -194,15 +204,14 @@
       margin-bottom: 21px
     }
 
-    &__copyright--tablet {
-      margin-bottom: 28px
+    &__bottom-copyright {
+      margin-bottom: 28px;
     }
 
     &__nav,
     &__contacts {
       flex-basis: 100%;
-      padding-top: 26px;
-      padding-bottom: 23px
+      padding: 0;
     }
 
     &__nav {
@@ -218,42 +227,6 @@
       }
     }
   }
-
-  .toggle-block {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    clear: both;
-
-    &.active {
-      padding-top: 30px;
-    }
-  }
-
-  .toggle-button {
-    display: block;
-    background-color: transparent;
-    border: none;
-    width: 16px;
-    height: 16px;
-    padding: 0;
-    float: right;
-    vertical-align: middle;
-
-    &::after {
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      content: "";
-      background-image: url("../img/icon-plus.svg");
-      background-size: cover;
-      vertical-align: middle;
-    }
-
-    &.active:after {
-      background-image: url("../img/icon-minus.svg");
-      height: 2px;
-    }
-  }
 }
+
 
