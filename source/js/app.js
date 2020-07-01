@@ -91,13 +91,15 @@ let copyright = document.querySelector('.main-footer__bottom-copyright'),
   socialLinks = document.querySelector('.main-footer__top .social-links'),
   policy = document.querySelector('.main-footer__bottom-policy');
 
-window.addEventListener('resize', () => {
+function windowResize () {
   if (document.body.clientWidth <= 1024) {
-      newLocation.insertBefore(copyright, socialLinks)
+    newLocation.insertBefore(copyright, socialLinks)
   } else if (document.body.clientWidth >= 1024) {
-      oldLocation.insertBefore(copyright, policy)
-    }
-});
+    oldLocation.insertBefore(copyright, policy)
+  }
+}
 
+window.addEventListener('resize', windowResize);
 
+windowResize();
 

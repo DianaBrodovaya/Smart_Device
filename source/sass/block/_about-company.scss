@@ -27,7 +27,7 @@
     padding-bottom: 80px;
 
     &__text {
-      margin-top: 7px
+      margin-top: 7px;
     }
 
     img {
@@ -41,6 +41,22 @@
 @media screen and(max-width: $mobile-width) {
   .about-company {
     padding-bottom: 64px;
+
+    &__text {
+      margin-top: 0;
+    /*  max-height: 410px;
+      overflow: hidden;*/
+
+      p {
+        margin-bottom: 42px;
+        max-height:180px;
+        overflow: hidden;
+      }
+
+      p:last-of-type {
+        margin-bottom: 5px
+      }
+    }
 
     img {
       display: none
